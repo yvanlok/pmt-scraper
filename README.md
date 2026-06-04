@@ -7,13 +7,13 @@ Point it at any PMT page that lists PDF links and it scrapes every PDF, sorts th
 ## Install
 
 ```bash
-pip install requests beautifulsoup4
+pip install pmt-scraper
 ```
 
 ## Usage
 
 ```bash
-python pmt_scrape.py <url> [options]
+pmt-scrape <url> [options]
 ```
 
 ## Options
@@ -54,28 +54,28 @@ Undated files are always kept.
 
 ```bash
 # All papers, grouped by heading
-python pmt_scrape.py https://www.physicsandmathstutor.com/maths-revision/a-level-papers/
+pmt-scrape https://www.physicsandmathstutor.com/maths-revision/a-level-papers/
 
 # Mark schemes only
-python pmt_scrape.py <url> --keywords "mark scheme"
+pmt-scrape <url> --keywords "mark scheme"
 
 # Mark schemes only (positive keyword)
-python pmt_scrape.py <url> --keywords +markscheme
+pmt-scrape <url> --keywords +markscheme
 
 # Mark schemes, excluding question papers
-python pmt_scrape.py <url> --keywords +markscheme -questions
+pmt-scrape <url> --keywords +markscheme -questions
 
 # Papers from 2018 to 2022
-python pmt_scrape.py <url> --year-range 2018 2022
+pmt-scrape <url> --year-range 2018 2022
 
 # Mark schemes for specific years (combine --years and --year-range)
-python pmt_scrape.py <url> --keywords +markscheme --years 2019 2021 2023 --year-range 2019 2023
+pmt-scrape <url> --keywords +markscheme --years 2019 2021 2023 --year-range 2019 2023
 
 # Paper 1 only, no mark schemes, preview before downloading
-python pmt_scrape.py <url> --keywords +paper1 -markscheme --dry-run
+pmt-scrape <url> --keywords +paper1 -markscheme --dry-run
 
 # Mirror PMT's folder structure
-python pmt_scrape.py <url> --organise path
+pmt-scrape <url> --organise path
 ```
 
 ## Project structure
