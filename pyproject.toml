@@ -23,7 +23,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/pmt-scraper"
+Homepage = "https://github.com/yvanlok/pmt-scraper"
 
 [project.scripts]
 pmt-scrape = "pmt_scraper.cli:main"
